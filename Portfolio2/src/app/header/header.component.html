@@ -1,0 +1,15 @@
+<div style="font-size:300%; text-align:center; background-color:gold">
+    Mitra's One Stop Shop
+</div>
+<div style="background-color:gainsboro">
+<span *ngFor = "let item of categories">
+    <a style="color:maroon; font-size:200%; margin: 10px;" [routerLink]= "'shop/' + item.ID">{{item.Title}}</a>
+</span>
+<span>
+    <a *ngIf= "!!Profile" routerLink= "profile">{{User.Name}}</a>
+    <a *ngIf= "!!Profile" style="color:maroon; font-size:200%;">Cash: {{User.Cash}}</a>
+    <button *ngIf= "!!Profile" style="background-color:darksalmon; font-size:200%; color:gainsboro;" routerLink= "cart">Cart</button>
+    <button style= "background-color:maroon; font-size:200%; color:gainsboro; margin-left:195px" *ngIf= "Profile == null" routerLink= "login">Login</button>
+</span>
+<router-outlet></router-outlet>
+</div>

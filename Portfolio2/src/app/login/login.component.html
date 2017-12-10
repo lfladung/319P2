@@ -1,0 +1,55 @@
+<div style="background-color:gainsboro">
+    <span>
+        <label style="margin-left:100px; font-family:'serif'; font-size:250%; color:green;">Login</label>
+        <form (ngSubmit)="HandleLoginSubmit()">
+            <div align="left">
+                <label style="font-size:150%">Username</label>
+                <input type="text" #username required>
+            </div>
+            <div align="left">
+                <label style="font-size:150%">Password</label>
+                <input style="margin-left:3px;" type="password" #password required>
+            </div>
+            <br/>
+            <button type="submit" style="margin-left:215px; color:white; background-color:green; font-size:150%;">Login</button>
+        </form>
+    </span>
+    <span>
+        <label style="margin-left:55px; margin-top:20px; font-family:'serif'; font-size:250%; color:indianred;">Registration</label>
+        <form [formGroup]="registerForm" (ngSubmit)="HandleRegisterSubmit()">
+            <div>
+                <label style="font-size:150%">Username</label>
+                <input type="text" formControlName="username">
+            </div>
+            <div>
+                <label style="font-size:150%">Password</label>
+                <input style="margin-left:3px;" type="password" formControlName="password">
+            </div>
+            <div>
+                <label style="font-size:150%">Gender</label>
+                <select style="font-size:150%; margin-left:28px;" formControlName="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div>
+                <label style="font-size:150%">Prefered Buys</label>
+                <select style="font-size:150%; " formControlName="prefered">
+                    <option value="images">Images</option>
+                    <option value="gifs">GIFs</option>
+                    <option value="soundbites">Soundbites</option>
+                    <option value="videos">Videos</option>
+                </select>
+            </div>
+            <div>
+                <label style="font-size:150%">Birthday</label>
+                <input style="font-size:120%; margin-left:16px" type="date" formControlName="birthday">
+            </div>
+            <div>
+                <label style="font-size:150%">Cash</label>
+                <input style="font-size:120%; margin-left:50px" type="number" formControlName="cash">
+            </div>
+            <button type="submit" style="background-color:indianred; color:white; text-size">Register</button> 
+        </form>
+    </span>
+</div>

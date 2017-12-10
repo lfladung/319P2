@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "Username": "Austin",
+      "Gender": "male",
+      "Prefered": "images",
+      "Birthday": null,
+      "Cash": 54,
+      "id": 1
+    },
+    {
+      "Username": "Logan",
+      "Gender": "male",
+      "Prefered": "gifs",
+      "Birthday": null,
+      "Cash": 15,
+      "id": 2
+    }
+  ],
+  "items": [],
+  "categories": [
+    {
+      "ID": 1,
+      "Title": "Images"
+    },
+    {
+      "ID": 2,
+      "Title": "GIFs"
+    },
+    {
+      "ID": 3,
+      "Title": "Soundbites"
+    },
+    {
+      "ID": 4,
+      "Title": "Videos"
+    }
+
+  ],
+  "logins": [
+    {
+      "Username": "Austin",
+      "Password": "keen",
+      "userID": 1,
+      "id": 1
+    },
+    {
+      "Username": "Logan",
+      "Password": "fladung",
+      "userID": 2,
+      "id": 2
+    }
+  ]
+}
