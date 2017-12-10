@@ -1,1 +1,5 @@
-FUCK THISSSSS
+<div style="text-align: center"*ngFor = "let product of products">
+    <h1 style="color:maroon; font-size:300%; margin: 40px;">{{product.name}}</h1>
+    <h1 style="color:maroon; font-size:200%; margin: 40px;">${{product.price}}</h1>
+    <button style="color:white; background-color:dimgray; font-size:200%" type="submit" onsubmit="purchase()">Add To Cart</button>
+</div>

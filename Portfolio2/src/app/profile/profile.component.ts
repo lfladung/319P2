@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 
 export class ProfileComponent 
 {
-   constructor() {
-       
-   }
+  userProf: any;
+  
+  constructor() {
+    this.userProf = JSON.parse(localStorage.getItem("User"));
+    console.log(this.userProf);
+  }
 }

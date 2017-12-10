@@ -22,7 +22,6 @@ export class ShopComponent
         {
           if(this.router.url == "/shop/" + j && info[i].category == j)
           {
-            console.log(info[i]);
             this.finItems.push(info[i]);
           }
         }
@@ -31,8 +30,7 @@ export class ShopComponent
     })
   }
 
-  handlePageChange()
-  {
+  refresh(){
     this.ItemService.getAll().subscribe(res => {
       var info = JSON.parse(JSON.stringify(res));
       for(var i = 0; i < info.length; i++)
@@ -41,7 +39,6 @@ export class ShopComponent
         {
           if(this.router.url == "/shop/" + j && info[i].category == j)
           {
-            console.log(info[i]);
             this.finItems.push(info[i]);
           }
         }
