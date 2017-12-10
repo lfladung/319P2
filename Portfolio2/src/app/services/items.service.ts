@@ -8,6 +8,6 @@ export class ItemService {
     }
 
     getAll(){
-       return this.http.get("http://localhost:3000/items"); 
+       return this.http.get("http://localhost:3000/items");
     }
 }
