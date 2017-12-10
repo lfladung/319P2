@@ -30,7 +30,7 @@ export class LoginComponent
     HandleLoginSubmit() {
         this.UserService.login(this.username.nativeElement.value, this.password.nativeElement.value).subscribe(res => {
             localStorage.setItem("User", JSON.stringify(res));
-            this.router.navigate(['shop', 1]);
+            this.router.navigate(['shop', res.Prefered);
         }, err => {
             console.log(err);
         } );
@@ -40,7 +40,7 @@ export class LoginComponent
         let value = this.registerForm.value;
         this.UserService.register(value.username, value.password, value.gender, value.prefered, value.birthday, value.cash).subscribe(res => {
             localStorage.setItem("User", JSON.stringify(res));
-            this.router.navigate(['shop', 1]);
+            this.router.navigate(['shop', value.prefered]);
         }, err => {
             console.log(err);
         })
