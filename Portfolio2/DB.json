@@ -3,7 +3,7 @@
     {
       "Username": "Austin",
       "Gender": "male",
-      "Prefered": "images",
+      "Prefered": 2,
       "Birthday": null,
       "Cash": 54,
       "id": 1
@@ -11,7 +11,7 @@
     {
       "Username": "Logan",
       "Gender": "male",
-      "Prefered": "gifs",
+      "Prefered": 3,
       "Birthday": null,
       "Cash": 15,
       "id": 2
