@@ -9,13 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   selector: 'app-login',
   templateUrl: './login.component.html'
 })
-export class LoginComponent 
-{   
+export class LoginComponent
+{
     @ViewChild('username') username: ElementRef;
     @ViewChild('password') password: ElementRef;
 
     registerForm: FormGroup;
-    
+
     constructor(private UserService: UserService, private router: Router, private fb: FormBuilder) {
         this.registerForm = this.fb.group({
             username: [null, Validators.required],
@@ -30,7 +30,8 @@ export class LoginComponent
     HandleLoginSubmit() {
         this.UserService.login(this.username.nativeElement.value, this.password.nativeElement.value).subscribe(res => {
             localStorage.setItem("User", JSON.stringify(res));
-            this.router.navigate(['shop', res.Prefered);
+            var info = JSON.parse(localStorage.getItem("User"));
+            this.router.navigate(['shop', info.Prefered]);
         }, err => {
             console.log(err);
         } );
