@@ -5,13 +5,15 @@ import { CategoryService } from '../services/categories.service';
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent 
+export class HeaderComponent
 {
     categories: any=[];
     Cart: any={ID:1};
+    signedin: any;
     constructor(private CategoryService : CategoryService) {
         this.CategoryService.getAll().subscribe(res => {
             this.categories = res;
-        })
+        });
+        this.signedin = localStorage.getItem("User");
     }
 }
