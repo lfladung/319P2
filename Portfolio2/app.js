@@ -9,9 +9,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.post('/api/login', (req,res) => {
     axios.get('http://localhost:3000/logins').then(logins => {
-        console.log(req.body, logins.data);
         let user = logins.data.filter(x => x.Username === req.body.Username);
-        console.log(user);
+        var locID = user[0].id - 1;
         if(user.length != 1)
         {
             res.status(500).send("Invalid Information");
@@ -20,7 +19,7 @@ app.post('/api/login', (req,res) => {
         if(user[0].Password === req.body.Password)
         {
             axios.get('http://localhost:3000/users').then(foundUser => {
-                res.send(foundUser.data.filter(x => x.ID === user[0].ID)[0]);
+                res.send(foundUser.data.filter(x => x.ID === user[0].ID)[locID]);
             });
         }
         else{
