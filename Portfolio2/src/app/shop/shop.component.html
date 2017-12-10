@@ -1,0 +1,5 @@
+<div>
+        <span *ngFor = "let product of items">
+            <a style="color:maroon; font-size:100%; margin: 10px;" [routerLink]= "'/product/' + product.id">{{product.name}}</a>
+        </span>
+</div>

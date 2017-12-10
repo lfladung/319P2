@@ -2,8 +2,8 @@
     Mitra's One Stop Shop
 </div>
 <div style="background-color:gainsboro">
-<span *ngFor = "let item of categories">
-    <a style="color:maroon; font-size:200%; margin: 10px;" [routerLink]= "'shop/' + item.ID">{{item.Title}}</a>
+<span *ngFor = "let cat of categories">
+    <a style="color:maroon; font-size:200%; margin: 10px;" (ngSubmit)="handlePageChange()" [routerLink]= "'shop/' + cat.ID">{{cat.Title}}</a>
 </span>
 <span>
     <a *ngIf= "!!Profile" routerLink= "profile">{{Profile.Name}}</a>
@@ -11,5 +11,4 @@
     <button *ngIf= "!!Profile" style="background-color:darksalmon; font-size:200%; color:gainsboro;" routerLink= "cart">Cart</button>
     <button style= "background-color:maroon; font-size:200%; color:gainsboro; margin-left:195px" *ngIf= "Profile == null" routerLink= "login">Login</button>
 </span>
-<router-outlet></router-outlet>
 </div>
