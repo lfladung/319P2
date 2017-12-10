@@ -3,7 +3,7 @@
 </div>
 <div style="background-color:gainsboro">
 <span *ngFor = "let item of categories">
-    <a style="color:maroon; font-size:200%; margin: 10px;" [routerLink]= "'shop/' + item.ID">{{item.Title}}</a>
+    <a style="color:maroon; font-size:200%; margin: 10px;" (ngSubmit)="handlePageChange()" [routerLink]= "'shop/' + item.ID">{{item.Title}}</a>
 </span>
 <span>
     <a *ngIf= "!!Profile" routerLink= "profile">{{User.Name}}</a>

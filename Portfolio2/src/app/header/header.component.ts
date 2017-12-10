@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CategoryService } from '../services/categories.service';
-
+import { ShopComponent } from '../shop/shop.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
