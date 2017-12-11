@@ -8,7 +8,7 @@ export class UserService {
     constructor(private http: HttpClient) {
 
     }
-    
+
     login(User: string, Password: string) {
         return this.http.post('http://localhost:5000/api/login', {Username: User, Password: Password});
     }

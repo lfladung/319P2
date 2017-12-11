@@ -1,0 +1,7 @@
+<div style="text-align:center">
+    <h1 style="font-size:200%; color:maroon">Cart</h1>
+    <div *ngFor="let prod of cart">
+        <h1 style="font-size:150%; color:black">{{prod.name}}  -  {{prod.price}}</h1>
+    </div>
+    <button style="font-size:150%; background-color:green; color:lightgreen" type="submit" (click)="buy()" routerLink="">Buy</button>
+</div>

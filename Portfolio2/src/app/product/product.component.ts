@@ -7,10 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './product.component.html'
 })
 
-export class ProductComponent 
+export class ProductComponent
 {
   finProducts: any=[];
   products: any=[];
+  product: any;
 
   constructor(private ItemService: ItemService, private router: Router) {
     this.ItemService.getAll().subscribe(res => {
@@ -19,7 +20,7 @@ export class ProductComponent
       {
         if(this.router.url == "/product/" + (i + 1))
         {
-          console.log(prod[i]);
+          this.product = prod[i];
           this.finProducts.push(prod[i]);
         }
       }
@@ -27,8 +28,15 @@ export class ProductComponent
   })
   }
 
-  purchase()
+  AddToCart()
   {
-    
+    var list = JSON.parse(localStorage.getItem("Cart"));
+    if(list == null){
+      list = [];
+    }
+    list.push(this.product);
+    console.log(list);
+    console.log(this.product);
+    localStorage.setItem("Cart", JSON.stringify(list));
   }
 }
