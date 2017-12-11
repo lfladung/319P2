@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
+import { CashComponent } from './cash/cash.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppComponent } from './app.component';
     ProfileComponent,
     CartComponent,
     LoginComponent,
-    AppComponent
+    AppComponent,
+    CashComponent
   ],
   imports: [
     BrowserModule,

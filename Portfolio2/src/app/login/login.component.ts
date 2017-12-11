@@ -1,5 +1,4 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { CategoryService } from '../services/categories.service';
 import { UserService, } from '../services/users.service';
 import { Router } from '@angular/router';
 import { User } from '../../../models/user';

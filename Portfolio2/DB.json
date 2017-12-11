@@ -3,34 +3,10 @@
     {
       "Username": "Austin",
       "Gender": "male",
-      "Prefered": 2,
-      "Birthday": null,
-      "Cash": 54,
-      "id": 1
-    },
-    {
-      "Username": "Logan",
-      "Gender": "male",
-      "Prefered": 4,
-      "Birthday": null,
-      "Cash": 15,
-      "id": 2
-    },
-    {
-      "Username": "Simanta",
-      "Gender": "male",
       "Prefered": "3",
-      "Birthday": "2013-10-29",
-      "Cash": 36,
-      "id": 3
-    },
-    {
-      "Username": "John",
-      "Gender": "male",
-      "Prefered": "2",
-      "Birthday": "2016-10-30",
-      "Cash": 3,
-      "id": 4
+      "Birthday": "1997-03-26",
+      "Cash": 29,
+      "id": 1
     }
   ],
   "items": [
@@ -53,7 +29,7 @@
       "category": 1,
       "name": "Doggo",
       "url": "http://cdn.akc.org/content/hero/Cute_puppy_header(1).jpg",
-      "price":  50
+      "price": 50
     },
     {
       "id": 4,
@@ -171,24 +147,7 @@
       "Password": "keen",
       "userID": 1,
       "id": 1
-    },
-    {
-      "Username": "Logan",
-      "Password": "fladung",
-      "userID": 2,
-      "id": 2
-    },
-    {
-      "Username": "Simanta",
-      "Password": "mitra",
-      "userID": 3,
-      "id": 3
-    },
-    {
-      "Username": "John",
-      "Password": "stamos",
-      "userID": 4,
-      "id": 4
     }
-  ]
+  ],
+  "cart": []
 }

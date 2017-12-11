@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 
 export class CartComponent 
 {
-    constructor() {
+  cart: any=[];
+  constructor(){
+    
+  }
+    
+  buy(){
 
-    }
+  }
 }
