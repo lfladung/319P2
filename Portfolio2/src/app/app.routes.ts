@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 export const routes: Routes = [
     {path: '', redirectTo: 'shop/1', pathMatch: 'full'},
     {path: 'shop/:categoryID?', component: ShopComponent},
-    {path: 'profile/:profileID?', component: ProfileComponent},
+    {path: 'profile', component: ProfileComponent},
     {path: 'product/:productID?', component: ProductComponent},
     {path: 'cart', component: CartComponent},
     {path: 'login', component: LoginComponent}

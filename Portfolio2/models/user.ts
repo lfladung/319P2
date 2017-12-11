@@ -7,7 +7,7 @@ export interface User {
     Birthday: Date,
     Username: string,
     Cash: number
-}
+  }
 
 export enum Gender {
     Male,
